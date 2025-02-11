@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: customer-service
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/trials
+    username: postgres
+    password: password
+  sql:
+    init:
+      #      schema-locations: "classpath:sql/schema.sql"
+      data-locations: "classpath:sql/schema.sql"
+
+server:
+  http2:
+    enabled: true
+  compression:
+    enabled: true
+    min-response-size: 2048
+    mime-types: application/json,application/xml
+
+logging:
+  level:
+    org:
+      springframework:
+        r2dbc: ERROR
