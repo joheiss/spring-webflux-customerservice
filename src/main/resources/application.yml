@@ -11,6 +11,7 @@ spring:
       data-locations: "classpath:sql/schema.sql"
 
 server:
+  port: 8081
   http2:
     enabled: true
   compression:
